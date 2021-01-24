@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+  
+  def counts(user)
+    @count_twitters = user.twitters.count
+  end
 end
